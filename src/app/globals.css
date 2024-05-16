@@ -4,22 +4,8 @@
 
 @font-face {
   font-family: "Monument";
-  src: url("/fonts/PPMonumentExtended-Regular.otf") format("opentype");
+  src: url("/fonts/MonumentExtended-Regular.woff2") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Monument Light";
-  src: url("/fonts/PPMonumentExtended-light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Monument Black";
-  src: url("/fonts/PPMonumentExtended-Black.otf") format("opentype");
-  font-weight: 700;
   font-style: normal;
 }
 

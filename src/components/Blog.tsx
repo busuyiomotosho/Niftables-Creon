@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Background from "/public/images/lower-background.png";
 import BlogCard from "./BlogCard";
+import BackgroundVideo from "./BackgroundVideo";
 
 interface Posts {
   title: string;
@@ -33,11 +34,13 @@ const Blog = () => {
   return (
     <div className="relative">
       <div className="absolute inset-0 -z-[5]">
-        <Image
+        <BackgroundVideo src="https://epc1kohkf3ywv9pn.public.blob.vercel-storage.com/roadmap-video-sFkdiirfaIXJWqXdD83RSqYKp3bOsz.mp4" />
+        <div className="absolute -z-[-2] w-full h-full top-0 left-0 bg-gradient-to-b from-black to-transparent bg-blend-soft-light contrast-200 opacity-20"></div>
+        {/* <Image
           src={Background}
           alt="Hero Background"
           className="object-cover w-full h-full"
-        />
+        /> */}
       </div>
       <div className="max-w-screen-xl h-full mx-auto flex flex-col pt-32 pb-16 space-y-4">
         {posts.map((post, index) => (

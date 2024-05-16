@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { Suspense, memo } from "react";
 import Image from "next/image";
-import Video from "/public/images/Video.png";
+import Overlay from "/public/images/dark-shape.png";
 
 interface ListItem {
   item: string;
@@ -41,7 +41,7 @@ const Section2 = () => {
     <div className="relative">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row py-32 gap-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 w-full md:w-1/2">
-          <h2 className="text-4xl font-monument-black lg:text-5xl uppercase">
+          <h2 className="text-4xl lg:text-5xl uppercase">
             Creon Pass <br /> NFT
           </h2>
           <hr className="h-px my-2 border-0 bg-gray-900" />
@@ -68,10 +68,19 @@ const Section2 = () => {
           </div>
         </div>
         <div className="relative md:w-1/2">
+          <Suspense fallback={<p>Loading video...</p>}>
+            <video loop muted autoPlay className="-z-[-3] object-cover h-full">
+              <source
+                src="https://epc1kohkf3ywv9pn.public.blob.vercel-storage.com/nft-video-lH2h42zn3tUe608KXolo45RbF7vU9o.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </Suspense>
           <Image
-            src={Video}
+            src={Overlay}
             alt="Video Display"
-            className="-z-[-3] object-cover h-full relative"
+            className="absolute top-0 left-0 object-cover h-full w-full"
           />
         </div>
       </div>
